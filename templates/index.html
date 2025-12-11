@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Movies & Genre Visualization Dashboard (Interactive)</h1>
+    <p style="text-align:center;">Hover, zoom, and explore the data.</p>
+
+    <div style="text-align:center; margin-bottom:20px;">
+        <label>Select Genre:</label>
+        <select id="genreFilter">
+            <option value="All">All Genres</option>
+        </select>
+    </div>
+
+    <div class="grid-container">
+
+        <div class="row">
+            <div class="plot-box half-width">
+                <h2>Top Keywords Across Genres</h2>
+                <div id="panel1"></div>
+            </div>
+
+            <div class="plot-box half-width">
+                <h2>Top Directors by Movie Revenue & Rating</h2>
+                <div id="panel2"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="plot-box">
+                <h2>Genre Revenue Graph (1960-2020)</h2>
+                <div id="panel3"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="plot-box half-width">
+                <h2>Global Film Production Distribution</h2>
+                <div id="panel4"></div>
+            </div>
+
+            <div class="plot-box half-width">
+                <h2>Genre & Their Top 30 Actors</h2>
+                <div id="panel5"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+        var graphs = {{ graphs | tojson }};
+    </script>
+
+    <script src="../static/app.js"></script>
+
+</body>
+</html>

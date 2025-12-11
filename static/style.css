@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+}
+
+h1 {
+    color: #66fcf1;
+    font-family: "Ubuntu", sans-serif;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #66fcf1;
+    font-family: "Ubuntu", sans-serif;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #45a29e;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.plot-box {
+    background: #1f2833;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #66fcf1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+/* ----------- Mobile Responsive ----------- */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column !important;
+    }
+
+    .half-width {
+        width: 98% !important;
+    }
+
+    .plot-box {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
