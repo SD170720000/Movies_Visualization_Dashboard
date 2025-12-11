@@ -10,6 +10,14 @@
 
 <body>
 
+    <!-- Loading Spinner Overlay -->
+    <div id="loading-overlay">
+        <div style="text-align:center;">
+            <div class="spinner"></div>
+            <p style="margin-top:20px;font-size:1.2em;">Loading dashboard, please wait...</p>
+        </div>
+    </div>
+
     <h1 style="text-align:center;">Movies & Genre Visualization Dashboard (Interactive)</h1>
     <p style="text-align:center;">Hover, zoom, and explore the data.</p>
 
@@ -55,11 +63,6 @@
     </div>
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-    <script>
-        var graphs = {{ graphs | tojson }};
-    </script>
-
     <script src="../static/app.js"></script>
 
 </body>

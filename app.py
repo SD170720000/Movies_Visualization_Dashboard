@@ -1,6 +1,6 @@
 # app.py
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import argparse
 
 from scripts.scrape import load_data
@@ -38,15 +38,23 @@ def run_batch():
 
 
 
+# Serve minimal page first; graphs loaded via AJAX
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+# API endpoint to get graphs (heavy processing happens here)
+@app.route("/get_graphs")
+def get_graphs():
+    global GRAPHS
     if not GRAPHS:
         run_batch()
-    return render_template("index.html", graphs=GRAPHS)
+    return jsonify(GRAPHS)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=5000)
     args = parser.parse_args()
-    app.run(port=args.port,debug=True)
+    print("[INFO] Starting Flask server.")
+    app.run(port=args.port, debug=True)
