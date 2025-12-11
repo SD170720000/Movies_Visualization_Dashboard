@@ -8,4 +8,4 @@ data/ratings.csv
 data.zip
 *.zip
 *.csv
-!data/movies_metadata.csv
+data/*

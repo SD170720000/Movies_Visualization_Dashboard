@@ -7,8 +7,7 @@ PORT=${1:-5000}
 COMMANDS=(  "python3 -m venv venv"
             "source venv/bin/activate"
             "python3 -m pip install --upgrade pip"
-            "pip install -r requirements.txt"
-            "python3 app.py --port ${PORT}" )
+            "pip install -r requirements.txt" )
 
 for COMMAND in "${COMMANDS[@]}"
 do
@@ -20,3 +19,10 @@ do
         exit ${FAILURE}
     fi
 done
+
+mkdir -p data
+kaggle datasets download -d rounakbanik/the-movies-dataset -p data
+unzip -o data/the-movies-dataset.zip -d data
+
+
+python3 app.py --port ${PORT}
