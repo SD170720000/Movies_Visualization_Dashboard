@@ -1,7 +1,4 @@
 pandas
-matplotlib
-seaborn
 plotly
 flask
-pywaffle
 kaggle
