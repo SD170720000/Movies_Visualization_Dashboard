@@ -7,7 +7,7 @@ This project provides a dashboard for visualizing movie data using Flask.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/SD170720000/Movies_Visualization_Dashboard.git
-   cd Movies
+   cd Movies_Visualization_Dashboard
    ```
 
 2. **Run the application**
