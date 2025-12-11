@@ -3,3 +3,9 @@ venv/
 __pycache__/
 *.pyc
 .env
+data/credits.csv
+data/ratings.csv
+data.zip
+*.zip
+*.csv
+!data/movies_metadata.csv
