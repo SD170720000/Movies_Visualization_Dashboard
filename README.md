@@ -13,11 +13,11 @@ This project provides a dashboard for visualizing movie data using Flask.
 2. **Run the application**
    Use the provided `run.sh` script. You can specify a port (default is `5000`):
    ```bash
-   ./run.sh [PORT]
+   run.sh [PORT]
    ```
    Example:
    ```bash
-   ./run.sh 5001
+   run.sh 5001
    ```
 
    The script will:
